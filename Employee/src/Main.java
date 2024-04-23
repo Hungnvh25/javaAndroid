@@ -49,8 +49,13 @@ public class Main {
                 System.out.print("Nhập ID Employee: ");
                 int id = s.nextInt();
 
-                employees.remove(id-1);
-                System.out.println("Xóa thành công");
+                try{
+                    employees.remove(id-1);
+                    System.out.println("Xóa thành công");
+                }catch (Exception e){
+                    System.out.println("Không tìm thấy Id "+id);
+                }
+
             }
 
         }while (check != 4);
